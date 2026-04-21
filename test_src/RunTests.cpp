@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Enemy.h"
+#include "Slingshot.h"
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
@@ -43,14 +44,20 @@ protected:
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
-    EXPECT_GT(e.getHealth(), 100);
-    SUCCEED() << "Test test passed";
-    FAIL() << "Test didn't pass";
+    EXPECT_EQ(e.getHealth(), 100);
+    /*SUCCEED() << "Test test passed";
+    FAIL() << "Test didn't pass";*/
 }
 
 TEST_F(EnemyTest, LethalDamagePopsPig) {
     enemy->takeDamage(60);
     EXPECT_TRUE(enemy->checkIfPopped());
+}
+
+//my own test
+TEST(Slingshot, Tension_Check) {
+    Slingshot s;
+    EXPECT_EQ(s.getTension(), 0);
 }
 
 int main(int argc, char** argv) {
