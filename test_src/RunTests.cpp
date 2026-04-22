@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "Enemy.h"
 #include "Slingshot.h"
+#include <vector>
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
@@ -41,6 +42,31 @@ protected:
 
 };
 
+//class ParamTest : public::testing::TestWithParam<int> {
+//protected:
+//    ParamTest() = default;
+//    ~ParamTest() = default;
+//
+//    void SetUp() override {
+//        //Code here will be called immediately after the constructor (right before each test)
+//    }
+//
+//    void TearDown() override {
+//
+//    }
+//};
+//
+//TEST_P(ParamTest, SimpleTest) {
+//    int i_test = GetParam();
+//    std::cout << "Param value:: " << i_test << std::endl;
+//    EXPECT_GT(i_test, 1);
+//}
+//
+//INSTANTIATE_TEST_SUITE_P(
+//    Simple,
+//    ParamTest, ::testing::Values(1, 2, 3, 4, 5)
+//);
+
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
@@ -58,6 +84,18 @@ TEST_F(EnemyTest, LethalDamagePopsPig) {
 TEST(Slingshot, Tension_Check) {
     Slingshot s;
     EXPECT_EQ(s.getTension(), 0);
+}
+
+TEST(EnemyTest1, XPosition_Test) {
+    Enemy e(0);
+    std::cout << "X Position: " << e.getX() << std::endl;
+    EXPECT_EQ(e.getX(), 0);
+}
+
+TEST(EnemyTest2, YPosition_Test) {
+    Enemy e(0);
+    std::cout << "Y Position: " << e.getY() << std::endl;
+    EXPECT_EQ(e.getY(), 0);
 }
 
 int main(int argc, char** argv) {

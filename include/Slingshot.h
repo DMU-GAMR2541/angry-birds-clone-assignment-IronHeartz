@@ -25,6 +25,7 @@ public:
         return true;
     }
 
+    //bool getpullBack() const { return pullBack; } //own
     int getTension() const { return i_tension; }
     std::string getBirdType() const { return str_birdType; }
 
