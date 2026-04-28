@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
 #include <iostream>
+#include "Pig.h"
+#include "Bird.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -87,6 +89,12 @@ int main() {
     sf_ballVisual.setOrigin(15.0f, 15.0f);
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
+    //Make a pig
+    Pig EnemyPig("../assets/Ang_Birds/sprite_1.png");
+
+    //Make a bird
+    //Bird PlayerBird("../assets/Ang_Birds/Angry_Birds.png");
+
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
         sf::Event event;
@@ -133,6 +141,8 @@ int main() {
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
+        EnemyPig.render(window);
+        //PlayerBird.render(window);
 
         window.display();
     }
