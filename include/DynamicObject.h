@@ -8,6 +8,7 @@ public:
 
 	void update() override {};
 	void render(sf::RenderWindow& GO_window) override;
+	void UpdateSprite(sf::Vector2f SpriteUpd);
 
 private:
 	sf::Sprite ObjSprite; //The sprite

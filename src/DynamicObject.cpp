@@ -18,3 +18,8 @@ void DynamicObject::render(sf::RenderWindow& GameWindow)
 {
 	GameWindow.draw(ObjSprite);
 }
+
+void DynamicObject::UpdateSprite(sf::Vector2f SpriteUpd)
+{
+	ObjSprite.setPosition(SpriteUpd);
+}
