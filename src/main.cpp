@@ -89,29 +89,38 @@ int main() {
     sf_ballVisual.setOrigin(15.0f, 15.0f);
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
+
+
     //Make a pig
-    Pig EnemyPig("../assets/Ang_Birds/sprite_1.png");
+    //Header, would need to change minor things
+    //Pig EnemyPig("../assets/Ang_Birds/sprite_1.png");
     b2Vec2 b2_PigPos; //Position of pig
     b2BodyDef b2_PigBodyDef; //Body definition for the object in box2d physics engine
     b2FixtureDef b2_PigFixtureDef; //fixture definition for the object in box2d physics engine
     b2Body* b2_PigBody; //The body for the object
     b2CircleShape b2_dynamicCircle; //The shape of the object, defined as a circle
 
+    //Constructor
     //produce an object in Box2D
-    b2_PigBodyDef.type = b2_dynamicBody;
-    b2_PigBodyDef.position.Set(600.0f / SCALE, 400.0f / SCALE); //orignally in pixels, divide to scale
-    //Create the body in the world
-    b2_PigBody = world.CreateBody(&b2_PigBodyDef);
-    b2_dynamicCircle.m_radius = 15.0f / SCALE; //15 pixels wide
+    //b2_PigBodyDef.type = b2_dynamicBody;
+    //b2_PigBodyDef.position.Set(600.0f / SCALE, 400.0f / SCALE); //orignally in pixels, divide to scale
+    ////Create the body in the world
+    //b2_PigBody = world.CreateBody(&b2_PigBodyDef);
+    //b2_dynamicCircle.m_radius = 15.0f / SCALE; //15 pixels wide
 
-    //Set up fixtures
-    b2_PigFixtureDef.shape = &b2_dynamicCircle;
-    b2_PigFixtureDef.density = 1.0f;
-    b2_PigFixtureDef.friction = 0.3f;
-    b2_PigFixtureDef.restitution = 0.5f;
+    ////Set up fixtures
+    //b2_PigFixtureDef.shape = &b2_dynamicCircle;
+    //b2_PigFixtureDef.density = 1.0f;
+    //b2_PigFixtureDef.friction = 0.3f;
+    //b2_PigFixtureDef.restitution = 0.5f;
 
-    //Attach to body
-    b2_PigBody->CreateFixture(&b2_PigFixtureDef);
+    ////Attach to body
+    //b2_PigBody->CreateFixture(&b2_PigFixtureDef);
+
+
+
+    //New Pig
+    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", world);
     
 
     //Make a bird
@@ -157,7 +166,8 @@ int main() {
         sf_plankVisual.setRotation(b2_plankBody->GetAngle() * (180.0f / PI));
 
         //Pig Update
-        EnemyPig.UpdateSprite(sf::Vector2f( b2_PigBody->GetPosition().x * SCALE, b2_PigBody->GetPosition().y * SCALE)); //Fro pixels and to box2d/vice versa
+        //EnemyPig.UpdateSprite(sf::Vector2f( b2_PigBody->GetPosition().x * SCALE, b2_PigBody->GetPosition().y * SCALE)); //Fro pixels and to box2d/vice versa
+        BigEnemyPig.UpdateSprite(); //Update every tick based on constructor
 
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
@@ -166,7 +176,8 @@ int main() {
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
-        EnemyPig.render(window);
+        BigEnemyPig.render(window);
+        //EnemyPig.render(window);
         //PlayerBird.render(window);
 
         window.display();

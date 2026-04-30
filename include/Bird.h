@@ -5,5 +5,5 @@ class Bird : public DynamicObject {
 public:
 	Bird() = default;
 
-	Bird(std::string PigSpriteLocation) : DynamicObject(PigSpriteLocation) {};
+	Bird(std::string PigSpriteLocation, b2World World) : DynamicObject(PigSpriteLocation, World) {};
 };
