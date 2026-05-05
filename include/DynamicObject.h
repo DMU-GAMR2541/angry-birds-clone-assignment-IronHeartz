@@ -4,7 +4,7 @@
 class DynamicObject : public GameObject {
 public:
 	DynamicObject() = default; //A destructor
-	DynamicObject(std::string ObjConstructor, b2World& World); //this is how we override the dynamic object. A constructor
+	DynamicObject(std::string ObjConstructor, sf::IntRect SprSize, b2World& World); //this is how we override the dynamic object. A constructor
 
 	void update() override {};
 	void render(sf::RenderWindow& GO_window) override;
@@ -15,10 +15,10 @@ private:
 	sf::Texture ObjTexture; //The texture/image
 	std::string TextureLocation; //File location
 	sf::RenderWindow ObjWindow;
-	b2Vec2 b2_PigPos; //Position of pig
-	b2BodyDef b2_PigBodyDef; //Body definition for the object in box2d physics engine
-	b2FixtureDef b2_PigFixtureDef; //fixture definition for the object in box2d physics engine
-	b2Body* b2_PigBody; //The body for the object
+	b2Vec2 b2_Pos; //Position of pig
+	b2BodyDef b2_BodyDef; //Body definition for the object in box2d physics engine
+	b2FixtureDef b2_FixtureDef; //fixture definition for the object in box2d physics engine
+	b2Body* b2_Body; //The body for the object
 	b2CircleShape b2_dynamicCircle; //The shape of the object, defined as a circle
 };
 

@@ -120,7 +120,8 @@ int main() {
 
 
     //New Pig
-    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", world);
+    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), world);
+    Bird Bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(933, 187, 90, 90), world);
     
 
     //Make a bird
@@ -168,6 +169,7 @@ int main() {
         //Pig Update
         //EnemyPig.UpdateSprite(sf::Vector2f( b2_PigBody->GetPosition().x * SCALE, b2_PigBody->GetPosition().y * SCALE)); //Fro pixels and to box2d/vice versa
         BigEnemyPig.UpdateSprite(); //Update every tick based on constructor
+        Bird.UpdateSprite();
 
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
@@ -178,7 +180,7 @@ int main() {
         window.draw(sf_ballVisual);
         BigEnemyPig.render(window);
         //EnemyPig.render(window);
-        //PlayerBird.render(window);
+        Bird.render(window);
 
         window.display();
     }
