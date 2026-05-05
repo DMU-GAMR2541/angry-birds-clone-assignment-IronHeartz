@@ -120,8 +120,8 @@ int main() {
 
 
     //New Pig
-    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), world);
-    Bird Bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(933, 187, 90, 90), world);
+    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), sf::Vector2f(400.0f, 200.0f), world);
+    Bird Bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(933, 187, 90, 90), sf::Vector2f(200.0f, 200.0f), world);
     
 
     //Make a bird

@@ -4,7 +4,7 @@
 class DynamicObject : public GameObject {
 public:
 	DynamicObject() = default; //A destructor
-	DynamicObject(std::string ObjConstructor, sf::IntRect SprSize, b2World& World); //this is how we override the dynamic object. A constructor
+	DynamicObject(std::string ObjConstructor, sf::IntRect SprSize, sf::Vector2f SprPosition, b2World& World); //this is how we override the dynamic object. A constructor
 
 	void update() override {};
 	void render(sf::RenderWindow& GO_window) override;
