@@ -42,4 +42,7 @@
       <UniqueIdentifier>{3012BC91-1FAC-3AFC-AD75-0651EF42DCE3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
 </Project>

@@ -3,6 +3,9 @@
 #include <iostream>
 #include "Pig.h"
 #include "Bird.h"
+#include <set>
+#include <vector>
+#include <list>
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -14,6 +17,10 @@ int main() {
 
     //Can set a definition for PI.
     const float PI = 3.1415927;
+
+    //Set up Mouse Position variables
+    float MousePosX;
+    float MousePosY;
 
     //setup world.
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
@@ -71,25 +78,40 @@ int main() {
     sf_plankVisual.setFillColor(sf::Color(139, 69, 19)); // Brown
 
     //Create a ball that is fired when space is pressed. We need to first have a dynamic ball to do it.
-    b2BodyDef b2_ballDef;
-    b2_ballDef.type = b2_dynamicBody;
-    b2_ballDef.position.Set(100.0f / SCALE, 500.0f / SCALE);
-    b2Body* b2_ballBody = world.CreateBody(&b2_ballDef); //HEREEEEEEEEEEEEEEEEE
+    //b2BodyDef b2_ballDef;
+    //b2_ballDef.type = b2_dynamicBody;
+    //b2_ballDef.position.Set(100.0f / SCALE, 500.0f / SCALE);
+    //b2Body* b2_ballBody = world.CreateBody(&b2_ballDef); //HEREEEEEEEEEEEEEEEEE
 
-    b2CircleShape b2_circleShape;
-    b2_circleShape.m_radius = 15.0f / SCALE;
+    //b2CircleShape b2_circleShape;
+    //b2_circleShape.m_radius = 15.0f / SCALE;
 
-    b2FixtureDef b2_ballFixture;
-    b2_ballFixture.shape = &b2_circleShape;
-    b2_ballFixture.density = 1.0f;
-    b2_ballFixture.restitution = 0.5f; // Bounciness
-    b2_ballBody->CreateFixture(&b2_ballFixture);
+    //b2FixtureDef b2_ballFixture;
+    //b2_ballFixture.shape = &b2_circleShape;
+    //b2_ballFixture.density = 1.0f;
+    //b2_ballFixture.restitution = 0.5f; // Bounciness
+    //b2_ballBody->CreateFixture(&b2_ballFixture);
 
-    sf::CircleShape sf_ballVisual(15.0f);
-    sf_ballVisual.setOrigin(15.0f, 15.0f);
-    sf_ballVisual.setFillColor(sf::Color::Yellow);
+    /*sf::CircleShape sf_ballVisual(15.0f);
+    sf_ballVisual.setOrigin(15.0f, 15.0f);*/
+    //sf_ballVisual.setFillColor(sf::Color::Yellow);
 
+    /*sf::Texture sf_ballTexture;
+    if (!sf_ballTexture.loadFromFile("../assets/Ang_Birds/red.png"))
+    {
+        std::cout << "Could not load from file";
+        return 0;
+    }*/
 
+    /*sf::Sprite sf_ballSprite;
+    sf_ballSprite.setTexture(sf_ballTexture);
+    sf_ballSprite.setScale(sf::Vector2f(0.05, 0.05));*/
+
+    //Setting velocity and Position of bird
+    const b2Vec2 SlingshotPos = b2Vec2(100.0f / SCALE, 500.0f / SCALE);
+    
+    //Move the bird back to beginning
+    const b2Vec2 ResetVel = b2Vec2(0, 0);
 
     //Make a pig
     //Header, would need to change minor things
@@ -117,12 +139,22 @@ int main() {
     ////Attach to body
     //b2_PigBody->CreateFixture(&b2_PigFixtureDef);
 
-
-
     //New Pig
-    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), sf::Vector2f(400.0f, 200.0f), world);
+    Pig EnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), sf::Vector2f(400.0f, 200.0f), world);
+    Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
     Bird Bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(933, 187, 90, 90), sf::Vector2f(200.0f, 200.0f), world);
     
+
+
+    //STL Pig
+    /*std::list<std::unique_ptr<Pig>> pigList; //Of type Pig. Created a set for pig
+    for (int i = 0; i < 3; i++)
+    {
+        pigList.push_back(std::make_unique<Pig>(Pig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), sf::Vector2f(400.0f + (i * 10), 200.0f), world))); //Put in elemnts needed to make a Pig
+    }*/
+
+    //NEWSET COMMENTED OUT
+
 
     //Make a bird
     //Bird PlayerBird("../assets/Ang_Birds/Angry_Birds.png");
@@ -134,16 +166,26 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            // INPUT HANDLING: Press SPACE to launch
-            if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::Space) {
+            if (event.type == sf::Event::MouseMoved) 
+            {
+                MousePosX = (event.mouseMove.x);
+                MousePosY = (event.mouseMove.y);
+            }
+
+            // INPUT HANDLING: Press MOUSEKEY to launch
+            if (event.type == sf::Event::MouseButtonPressed) {
+                if (event.key.code == sf::Mouse::Left) {
                     // Reset position of the ball so that it can be fired again from its original poisition.
-                    b2_ballBody->SetTransform(b2Vec2(100.0f / SCALE, 500.0f / SCALE), 0);
+                    /*b2_ballBody->SetTransform(b2Vec2(100.0f / SCALE, 500.0f / SCALE), 0);
                     b2_ballBody->SetLinearVelocity(b2Vec2(0, 0));
-                    b2_ballBody->SetAngularVelocity(0);
+                    b2_ballBody->SetAngularVelocity(0);*/
 
                     // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+                    //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+
+                    Bird.setVelocity(ResetVel);
+                    Bird.setPosition(SlingshotPos, 0);
+                    Bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
 
                     std::cout << "Firing!!!!" << std::endl;
                 }
@@ -155,8 +197,8 @@ int main() {
 
         //All of the visuals needs to be synced with the physics.
 
-        sf_ballVisual.setPosition(b2_ballBody->GetPosition().x * SCALE, b2_ballBody->GetPosition().y * SCALE);
-        sf_ballVisual.setRotation(b2_ballBody->GetAngle() * (180.0f / PI));
+        /*sf_ballVisual.setPosition(b2_ballBody->GetPosition().x * SCALE, b2_ballBody->GetPosition().y * SCALE);
+        sf_ballVisual.setRotation(b2_ballBody->GetAngle() * (180.0f / PI));*/
 
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
@@ -168,17 +210,22 @@ int main() {
 
         //Pig Update
         //EnemyPig.UpdateSprite(sf::Vector2f( b2_PigBody->GetPosition().x * SCALE, b2_PigBody->GetPosition().y * SCALE)); //Fro pixels and to box2d/vice versa
-        BigEnemyPig.UpdateSprite(); //Update every tick based on constructor
+        EnemyPig.UpdateSprite(); //Update every tick based on constructor
         Bird.UpdateSprite();
+        GeneralPig.UpdateSprite();
+        
 
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
 
+
+
         window.draw(sf_groundVisual);
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
-        window.draw(sf_ballVisual);
-        BigEnemyPig.render(window);
+        //window.draw(sf_ballSprite);
+        EnemyPig.render(window);
+        GeneralPig.render(window);
         //EnemyPig.render(window);
         Bird.render(window);
 

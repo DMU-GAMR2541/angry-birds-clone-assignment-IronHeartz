@@ -374,6 +374,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>sfml-window</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
