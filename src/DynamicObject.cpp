@@ -1,6 +1,6 @@
 #include "DynamicObject.h"
 
-DynamicObject::DynamicObject(std::string ObjConstructor, sf::IntRect SprSize, sf::Vector2f SprPosition, b2World& World)
+DynamicObject::DynamicObject(std::string ObjConstructor, sf::IntRect SprSize, b2World& World)
 {
 	//Don't forget to name the variables in the brackets so it nows what we're doing
 	TextureLocation = ObjConstructor;
@@ -10,7 +10,7 @@ DynamicObject::DynamicObject(std::string ObjConstructor, sf::IntRect SprSize, sf
 	}
 
 	ObjSprite.setTexture(ObjTexture);
-	ObjSprite.setPosition(SprPosition);
+	ObjSprite.setPosition(sf::Vector2f(200.0f, 200.0));
     ObjSprite.setOrigin(ObjSprite.getLocalBounds().getSize().x / 2, ObjSprite.getLocalBounds().getSize().y /2); //Setting the collider to be the centre of the sprite
 
     //produce an object in Box2D

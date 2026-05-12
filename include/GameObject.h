@@ -11,7 +11,7 @@ public:
 	virtual void update() = 0; //pure virtual function. Needs to be overriden when inherited
 	virtual void render(sf::RenderWindow& GO_window) = 0;
 
-	//~GameObject() = default;
+	~GameObject() = default;
 
 protected:
 	const float SCALE = 30.0f; //Anything that inherits can access

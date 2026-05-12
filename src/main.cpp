@@ -140,21 +140,18 @@ int main() {
     //b2_PigBody->CreateFixture(&b2_PigFixtureDef);
 
     //New Pig
-    Pig EnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), sf::Vector2f(400.0f, 200.0f), world);
-    Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
-    Bird Bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(933, 187, 90, 90), sf::Vector2f(200.0f, 200.0f), world);
+    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), world);
+    //Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
+    Bird bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(933, 187, 90, 90), world);
     
+    //List of Pigs
+    std::list < std::unique_ptr<Pig>> ls_pigs; //Make list unique pointers
 
-
-    //STL Pig
-    /*std::list<std::unique_ptr<Pig>> pigList; //Of type Pig. Created a set for pig
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++) 
     {
-        pigList.push_back(std::make_unique<Pig>(Pig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), sf::Vector2f(400.0f + (i * 10), 200.0f), world))); //Put in elemnts needed to make a Pig
-    }*/
-
-    //NEWSET COMMENTED OUT
-
+        //Create a new bird on the heap and move it into the list
+        ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/sprite_2.png", sf::IntRect(0, 0, 59, 52), world));
+    }
 
     //Make a bird
     //Bird PlayerBird("../assets/Ang_Birds/Angry_Birds.png");
@@ -180,12 +177,12 @@ int main() {
                     b2_ballBody->SetLinearVelocity(b2Vec2(0, 0));
                     b2_ballBody->SetAngularVelocity(0);*/
 
-                    // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
+                    //Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
                     //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
 
-                    Bird.setVelocity(ResetVel);
-                    Bird.setPosition(SlingshotPos, 0);
-                    Bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
+                    bird.setVelocity(ResetVel);
+                    bird.setPosition(SlingshotPos, 0);
+                    bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
 
                     std::cout << "Firing!!!!" << std::endl;
                 }
@@ -210,24 +207,29 @@ int main() {
 
         //Pig Update
         //EnemyPig.UpdateSprite(sf::Vector2f( b2_PigBody->GetPosition().x * SCALE, b2_PigBody->GetPosition().y * SCALE)); //Fro pixels and to box2d/vice versa
-        EnemyPig.UpdateSprite(); //Update every tick based on constructor
-        Bird.UpdateSprite();
-        GeneralPig.UpdateSprite();
+        BigEnemyPig.UpdateSprite(); //Update every tick based on constructor
+        bird.UpdateSprite();
+        //GeneralPig.UpdateSprite();
         
 
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
 
-
+        for (std::unique_ptr<Pig>& p : ls_pigs) 
+        {
+            p->setLocation(b2Vec2(2.f, 2.f));
+            p->UpdateSprite();
+            p->render(window);
+        }
 
         window.draw(sf_groundVisual);
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         //window.draw(sf_ballSprite);
-        EnemyPig.render(window);
-        GeneralPig.render(window);
+        BigEnemyPig.render(window);
+        //GeneralPig.render(window);
         //EnemyPig.render(window);
-        Bird.render(window);
+        bird.render(window);
 
         window.display();
     }
