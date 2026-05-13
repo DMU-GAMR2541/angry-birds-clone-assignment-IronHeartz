@@ -10,7 +10,7 @@ DynamicObject::DynamicObject(std::string ObjConstructor, b2Vec2 SprPosition, b2W
 	}
 
 	ObjSprite.setTexture(ObjTexture);
-	ObjSprite.setPosition(sf::Vector2f(200.0f, 200.0));
+	ObjSprite.setPosition(sf::Vector2f(SprPosition.x * SCALE, SprPosition.y * SCALE)); //Don't forget B2Vec2 is like in meters so it would be really far. So mulitply by scale
     ObjSprite.setOrigin(ObjSprite.getLocalBounds().getSize().x / 2, ObjSprite.getLocalBounds().getSize().y /2); //Setting the collider to be the centre of the sprite
 
     //produce an object in Box2D
