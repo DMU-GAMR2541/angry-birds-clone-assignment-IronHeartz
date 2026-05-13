@@ -140,9 +140,9 @@ int main() {
     //b2_PigBody->CreateFixture(&b2_PigFixtureDef);
 
     //New Pig
-    Pig BigEnemyPig("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 59, 52), world);
+    Pig BigEnemyPig("../assets/Ang_Birds/EnemyPig.png", b2Vec2(500.0f, 200.0f), world);
     //Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
-    Bird bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(933, 187, 90, 90), world);
+    Bird bird("../assets/Ang_Birds/red.png", b2Vec2(100.0f, 200.0f), world);
     
     //List of Pigs
     std::list < std::unique_ptr<Pig>> ls_pigs; //Make list unique pointers
@@ -150,7 +150,7 @@ int main() {
     for (int i = 0; i < 3; i++) 
     {
         //Create a new bird on the heap and move it into the list
-        ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/sprite_2.png", sf::IntRect(0, 0, 59, 52), world));
+        ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2(500.0f * 2, 200.0f), world));
     }
 
     //Make a bird
@@ -217,7 +217,7 @@ int main() {
 
         for (std::unique_ptr<Pig>& p : ls_pigs) 
         {
-            p->setLocation(b2Vec2(2.f, 2.f));
+            //p->setLocation(b2Vec2(2.f, 2.f));
             p->UpdateSprite();
             p->render(window);
         }

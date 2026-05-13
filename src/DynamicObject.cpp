@@ -1,11 +1,11 @@
 #include "DynamicObject.h"
 
-DynamicObject::DynamicObject(std::string ObjConstructor, sf::IntRect SprSize, b2World& World)
+DynamicObject::DynamicObject(std::string ObjConstructor, b2Vec2 SprPosition, b2World& World)
 {
 	//Don't forget to name the variables in the brackets so it nows what we're doing
 	TextureLocation = ObjConstructor;
 	
-	if (!ObjTexture.loadFromFile(TextureLocation, SprSize)) { //if the sprite isn't loaded
+	if (!ObjTexture.loadFromFile(TextureLocation)) { //if the sprite isn't loaded
 		std::cout << "Not loaded" << std::endl;
 	}
 
