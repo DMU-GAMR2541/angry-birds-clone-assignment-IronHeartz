@@ -14,6 +14,7 @@ public:
 	}
 	void setPosition(b2Vec2 ResetPos, float Angle) { b2_Body->SetTransform(ResetPos, Angle); }; //Set positiopn back to start or anywhere for any dynamic object
 	void setVelocity(b2Vec2 ResetVel) { b2_Body->SetLinearVelocity(ResetVel); };                //Setting velocity
+	b2Body* getBody();
 
 	void setLocation(b2Vec2 b2_loc)
 	{

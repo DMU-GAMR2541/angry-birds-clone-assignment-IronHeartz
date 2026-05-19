@@ -41,3 +41,8 @@ void DynamicObject::UpdateSprite()
     ObjSprite.setPosition(sf::Vector2f(b2_Body->GetPosition().x * SCALE, b2_Body->GetPosition().y * SCALE)); //The position of the sprite is equal to this
 	//ObjSprite.setPosition(SpriteUpd);                                                                      //Update from the body as it moves
 }
+
+b2Body* DynamicObject::getBody()
+{
+    return b2_Body;
+}

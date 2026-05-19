@@ -130,6 +130,20 @@ int main() {
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
 
+    //Setting up for bird to be dragged and swapped
+    sf::Vector2f slingshotOrigin(150.0f, 500.0f);
+    float maxDragX = 75.0f;
+    float minDragY = 75.0f;
+    float launchStrength = 10.0f;
+
+    bool isFired = false;
+    bool birdInAir = false;
+    bool isDragging = false;
+
+    Bird* tempBird = ls_birds.front().get(); //Grab the first bird from the list
+    b2Body* tempBody = tempBird->getBody();  //Grab the b
+    tempBody->SetTransform(b2Vec2(150.0f / SCALE, 500.0f / SCALE), 0);
+    tempBody->SetType(b2_kinematicBody);
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -203,7 +217,6 @@ int main() {
 
         for (std::unique_ptr<Bird>& b : ls_birds)
         {
-            //p->setLocation(b2Vec2(2.f, 2.f));
             b->UpdateSprite();
             b->render(window);
         }
