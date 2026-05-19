@@ -45,15 +45,15 @@ int main() {
 
     //Setting up a wall for the ball to hit.
     b2BodyDef b2_wallDef;
-    b2_wallDef.position.Set(750.0f / SCALE, 500.0f / SCALE);
+    b2_wallDef.position.Set(800.0f / SCALE, 70.0f / SCALE); //100
     b2Body* b2_wallBody = world.CreateBody(&b2_wallDef);
 
 
     b2PolygonShape b2_wallBox;
-    b2_wallBox.SetAsBox(10.0f / SCALE, 80.0f / SCALE);
+    b2_wallBox.SetAsBox(10.0f / SCALE, 600.0f / SCALE);
     b2_wallBody->CreateFixture(&b2_wallBox, 0.0f);
 
-    sf::RectangleShape sf_wallVisual(sf::Vector2f(20.0f, 160.0f));
+    sf::RectangleShape sf_wallVisual(sf::Vector2f(20.0f, 700.0f)); //500
     sf_wallVisual.setOrigin(10.0f, 80.0f);
     sf_wallVisual.setFillColor(sf::Color::Red);
 
@@ -61,7 +61,7 @@ int main() {
     b2BodyDef b2_plankDef;
 
     b2_plankDef.type = b2_dynamicBody;
-    b2_plankDef.position.Set(550.0f / SCALE, 450.0f / SCALE);
+    b2_plankDef.position.Set(400.0f / SCALE, 450.0f / SCALE);
     b2Body* b2_plankBody = world.CreateBody(&b2_plankDef);
 
     b2PolygonShape b2_plankBox;
@@ -77,35 +77,24 @@ int main() {
     sf_plankVisual.setOrigin(10.0f, 60.0f);
     sf_plankVisual.setFillColor(sf::Color(139, 69, 19)); // Brown
 
-    //Create a ball that is fired when space is pressed. We need to first have a dynamic ball to do it.
-    //b2BodyDef b2_ballDef;
-    //b2_ballDef.type = b2_dynamicBody;
-    //b2_ballDef.position.Set(100.0f / SCALE, 500.0f / SCALE);
-    //b2Body* b2_ballBody = world.CreateBody(&b2_ballDef); //HEREEEEEEEEEEEEEEEEE
+    b2BodyDef b2_plankDef2;
 
-    //b2CircleShape b2_circleShape;
-    //b2_circleShape.m_radius = 15.0f / SCALE;
+    b2_plankDef2.type = b2_dynamicBody;
+    b2_plankDef2.position.Set(650.0f / SCALE, 450.0f / SCALE);
+    b2Body* b2_plankBody2 = world.CreateBody(&b2_plankDef2);
 
-    //b2FixtureDef b2_ballFixture;
-    //b2_ballFixture.shape = &b2_circleShape;
-    //b2_ballFixture.density = 1.0f;
-    //b2_ballFixture.restitution = 0.5f; // Bounciness
-    //b2_ballBody->CreateFixture(&b2_ballFixture);
+    b2PolygonShape b2_plankBox2;
+    b2_plankBox2.SetAsBox(10.0f / SCALE, 60.0f / SCALE);
 
-    /*sf::CircleShape sf_ballVisual(15.0f);
-    sf_ballVisual.setOrigin(15.0f, 15.0f);*/
-    //sf_ballVisual.setFillColor(sf::Color::Yellow);
+    b2FixtureDef b2_plankFixture2;
+    b2_plankFixture2.shape = &b2_plankBox2;
+    b2_plankFixture2.density = 1.5f;   // Light wood
+    b2_plankFixture2.friction = 0.3f;
+    b2_plankBody2->CreateFixture(&b2_plankFixture2);
 
-    /*sf::Texture sf_ballTexture;
-    if (!sf_ballTexture.loadFromFile("../assets/Ang_Birds/red.png"))
-    {
-        std::cout << "Could not load from file";
-        return 0;
-    }*/
-
-    /*sf::Sprite sf_ballSprite;
-    sf_ballSprite.setTexture(sf_ballTexture);
-    sf_ballSprite.setScale(sf::Vector2f(0.05, 0.05));*/
+    sf::RectangleShape sf_plankVisual2(sf::Vector2f(20.0f, 120.0f));
+    sf_plankVisual2.setOrigin(10.0f, 60.0f);
+    sf_plankVisual2.setFillColor(sf::Color(139, 69, 19));
 
     //Setting velocity and Position of bird
     const b2Vec2 SlingshotPos = b2Vec2(100.0f / SCALE, 500.0f / SCALE);
@@ -122,23 +111,6 @@ int main() {
     b2Body* b2_PigBody; //The body for the object
     b2CircleShape b2_dynamicCircle; //The shape of the object, defined as a circle
 
-    //Constructor
-    //produce an object in Box2D
-    //b2_PigBodyDef.type = b2_dynamicBody;
-    //b2_PigBodyDef.position.Set(600.0f / SCALE, 400.0f / SCALE); //orignally in pixels, divide to scale
-    ////Create the body in the world
-    //b2_PigBody = world.CreateBody(&b2_PigBodyDef);
-    //b2_dynamicCircle.m_radius = 15.0f / SCALE; //15 pixels wide
-
-    ////Set up fixtures
-    //b2_PigFixtureDef.shape = &b2_dynamicCircle;
-    //b2_PigFixtureDef.density = 1.0f;
-    //b2_PigFixtureDef.friction = 0.3f;
-    //b2_PigFixtureDef.restitution = 0.5f;
-
-    ////Attach to body
-    //b2_PigBody->CreateFixture(&b2_PigFixtureDef);
-
     //New Pig
     Pig BigEnemyPig("../assets/Ang_Birds/EnemyPig.png", b2Vec2(500.0f / SCALE, 200.0f / SCALE), world);
     //Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
@@ -152,9 +124,6 @@ int main() {
         //Create a new bird on the heap and move it into the list
         ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
     }
-
-    //Make a bird
-    //Bird PlayerBird("../assets/Ang_Birds/Angry_Birds.png");
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -205,6 +174,10 @@ int main() {
         sf_plankVisual.setPosition(b2_plankBody->GetPosition().x * SCALE, b2_plankBody->GetPosition().y * SCALE);
         sf_plankVisual.setRotation(b2_plankBody->GetAngle() * (180.0f / PI));
 
+        // Dynamic wall 2
+        sf_plankVisual2.setPosition(b2_plankBody2->GetPosition().x * SCALE, b2_plankBody2->GetPosition().y * SCALE);
+        sf_plankVisual2.setRotation(b2_plankBody2->GetAngle() * (180.0f / PI));
+
         //Pig Update
         //EnemyPig.UpdateSprite(sf::Vector2f( b2_PigBody->GetPosition().x * SCALE, b2_PigBody->GetPosition().y * SCALE)); //Fro pixels and to box2d/vice versa
         BigEnemyPig.UpdateSprite(); //Update every tick based on constructor
@@ -225,10 +198,8 @@ int main() {
         window.draw(sf_groundVisual);
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
-        //window.draw(sf_ballSprite);
+        window.draw(sf_plankVisual2);
         BigEnemyPig.render(window);
-        //GeneralPig.render(window);
-        //EnemyPig.render(window);
         bird.render(window);
 
         window.display();
