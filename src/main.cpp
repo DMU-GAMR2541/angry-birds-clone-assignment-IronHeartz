@@ -133,7 +133,7 @@ int main() {
     //Setting up for bird to be dragged and swapped
     sf::Vector2f slingshotOrigin(150.0f, 500.0f);
     float maxDragX = 75.0f;
-    float minDragY = 75.0f;
+    float maxDragY = 75.0f;
     float launchStrength = 10.0f;
 
     bool isFired = false;
@@ -164,20 +164,61 @@ int main() {
 
             // INPUT HANDLING: Press MOUSEKEY to launch
             if (event.type == sf::Event::MouseButtonPressed) {
-                if (event.key.code == sf::Mouse::Left) {
-                    // Reset position of the ball so that it can be fired again from its original poisition.
-                    /*b2_ballBody->SetTransform(b2Vec2(100.0f / SCALE, 500.0f / SCALE), 0);
-                    b2_ballBody->SetLinearVelocity(b2Vec2(0, 0));
-                    b2_ballBody->SetAngularVelocity(0);*/
+                if (event.key.code == sf::Mouse::Left) 
+                {
+                    if (currentBird < static_cast<int>(ls_birds.size()) && !isFired)
+                    {
+                        isDragging = true; //Start being able to drag
+                    }
+                    
 
-                    //Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
-
-                    bird.setVelocity(ResetVel);
-                    bird.setPosition(SlingshotPos, 0);
-                    bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
+                    //bird.setVelocity(ResetVel);
+                    //bird.setPosition(SlingshotPos, 0);
+                    //bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
 
                     std::cout << "Firing!!!!" << std::endl;
+                }
+
+                if (event.type == sf::Event::MouseButtonReleased)
+                {
+                    if (event.key.code == sf::Mouse::Left)
+                    {
+                        if (isDragging)
+                        {
+                            Bird* tempBird = ls_birds.front().get();
+                            b2Body* tempBody = tempBird->getBody();
+
+                            sf::Vector2f birdPos(tempBody->GetPosition().x * SCALE, tempBody->GetPosition().y * SCALE);
+                            sf::Vector2f slingshotVector = slingshotOrigin - birdPos; //The vector used to fire the bird. The distance between the two variables
+
+                            tempBody->SetType(b2_dynamicBody); //allows for physics to affect the bird
+                            tempBody->ApplyLinearImpulseToCenter(b2Vec2(slingshotVector.x * launchStrength / SCALE, slingshotVector.y * launchStrength / SCALE), true); //Applies force to the body of the bird
+
+                            isDragging = false; //Bird is now fired and is no longer being dragged
+                            std::cout << isDragging << std::endl;
+                            isFired = true;
+                            birdTimer.restart(); //Resets timer
+                        }
+
+                    }
+
+                    //Dragging System
+                    if (isDragging)
+                    {
+                        Bird* tempBird = ls_birds.front().get();
+                        b2Body* tempBody = tempBird->getBody();
+
+                        sf::Vector2i mousePos = sf::Mouse::getPosition(window); //Gets the mouse position
+                        sf::Vector2f mouseWorldPos(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y)); //Use static cast to convert to float
+                        sf::Vector2f dragVector = mouseWorldPos - slingshotOrigin; //Calculate vector from slingshot to mouse
+
+                        //Maxing the drag distance
+                        dragVector.x = std::clamp(dragVector.x, -maxDragX, maxDragY);
+                        dragVector.y = std::clamp(dragVector.x, -maxDragY, maxDragX);
+
+                        sf::Vector2f finalPos = slingshotOrigin + dragVector; //Calculate drag vector based on DragVec and slingshot
+                        tempBody->SetTransform(b2Vec2(finalPos.x / SCALE, finalPos.y / SCALE), 0);
+                    }
                 }
             }
         }
