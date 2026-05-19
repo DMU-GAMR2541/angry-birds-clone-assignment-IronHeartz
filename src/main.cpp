@@ -141,9 +141,13 @@ int main() {
     bool isDragging = false;
 
     Bird* tempBird = ls_birds.front().get(); //Grab the first bird from the list
-    b2Body* tempBody = tempBird->getBody();  //Grab the b
-    tempBody->SetTransform(b2Vec2(150.0f / SCALE, 500.0f / SCALE), 0);
-    tempBody->SetType(b2_kinematicBody);
+    b2Body* tempBody = tempBird->getBody();  //Grab the body of the bird
+    tempBody->SetTransform(b2Vec2(150.0f / SCALE, 500.0f / SCALE), 0); //Placing it where the slingshot is
+    tempBody->SetType(b2_kinematicBody); //prevents the bird from falling to the ground
+    int currentBird = 0;
+    float waitingTime = 0.0f;
+    float waitingTimeThreshold = 5.0f;
+    sf::Clock birdTimer; //Just a timer :D
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
