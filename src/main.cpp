@@ -80,7 +80,7 @@ int main() {
     b2BodyDef b2_plankDef2;
 
     b2_plankDef2.type = b2_dynamicBody;
-    b2_plankDef2.position.Set(650.0f / SCALE, 450.0f / SCALE);
+    b2_plankDef2.position.Set(600.0f / SCALE, 450.0f / SCALE);
     b2Body* b2_plankBody2 = world.CreateBody(&b2_plankDef2);
 
     b2PolygonShape b2_plankBox2;
@@ -124,6 +124,12 @@ int main() {
         //Create a new bird on the heap and move it into the list
         ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
     }
+
+    std::list < std::unique_ptr<Bird>> ls_birds;
+
+    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
+    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
+
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -193,6 +199,13 @@ int main() {
             //p->setLocation(b2Vec2(2.f, 2.f));
             p->UpdateSprite();
             p->render(window);
+        }
+
+        for (std::unique_ptr<Bird>& b : ls_birds)
+        {
+            //p->setLocation(b2Vec2(2.f, 2.f));
+            b->UpdateSprite();
+            b->render(window);
         }
 
         window.draw(sf_groundVisual);
