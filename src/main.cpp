@@ -80,7 +80,7 @@ int main() {
     b2BodyDef b2_plankDef2;
 
     b2_plankDef2.type = b2_dynamicBody;
-    b2_plankDef2.position.Set(650.0f / SCALE, 450.0f / SCALE);
+    b2_plankDef2.position.Set(600.0f / SCALE, 450.0f / SCALE);
     b2Body* b2_plankBody2 = world.CreateBody(&b2_plankDef2);
 
     b2PolygonShape b2_plankBox2;
@@ -125,12 +125,6 @@ int main() {
         ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
     }
 
-    //List of Birds
-    std::list < std::unique_ptr<Bird>> ls_birds;
-    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((80.0f / SCALE), 200.0f / SCALE), world));
-    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
-
-
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
         sf::Event event;
@@ -146,18 +140,17 @@ int main() {
 
             // INPUT HANDLING: Press MOUSEKEY to launch
             if (event.type == sf::Event::MouseButtonPressed) {
-                if (event.key.code == sf::Mouse::Left) {
-                    // Reset position of the ball so that it can be fired again from its original poisition.
-                    /*b2_ballBody->SetTransform(b2Vec2(100.0f / SCALE, 500.0f / SCALE), 0);
-                    b2_ballBody->SetLinearVelocity(b2Vec2(0, 0));
-                    b2_ballBody->SetAngularVelocity(0);*/
+                if (event.key.code == sf::Mouse::Left) 
+                {
+                    if (currentBird < static_cast<int>(ls_birds.size()) && !isFired)
+                    {
+                        isDragging = true; //Start being able to drag
+                    }
+                    
 
-                    //Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
-
-                    bird.setVelocity(ResetVel);
-                    bird.setPosition(SlingshotPos, 0);
-                    bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
+                    //bird.setVelocity(ResetVel);
+                    //bird.setPosition(SlingshotPos, 0);
+                    //bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
 
                     std::cout << "Firing!!!!" << std::endl;
                 }
