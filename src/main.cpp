@@ -114,7 +114,7 @@ int main() {
     //New Pig
     Pig BigEnemyPig("../assets/Ang_Birds/EnemyPig.png", b2Vec2(500.0f / SCALE, 200.0f / SCALE), world);
     //Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
-    Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f / SCALE, 200.0f / SCALE), world);
+    Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
     
     //List of Pigs
     std::list < std::unique_ptr<Pig>> ls_pigs; //Make list unique pointers
@@ -124,6 +124,12 @@ int main() {
         //Create a new bird on the heap and move it into the list
         ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
     }
+
+    std::list < std::unique_ptr<Bird>> ls_birds;
+
+    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
+    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
+
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -140,17 +146,18 @@ int main() {
 
             // INPUT HANDLING: Press MOUSEKEY to launch
             if (event.type == sf::Event::MouseButtonPressed) {
-                if (event.key.code == sf::Mouse::Left) 
-                {
-                    if (currentBird < static_cast<int>(ls_birds.size()) && !isFired)
-                    {
-                        isDragging = true; //Start being able to drag
-                    }
-                    
+                if (event.key.code == sf::Mouse::Left) {
+                    // Reset position of the ball so that it can be fired again from its original poisition.
+                    /*b2_ballBody->SetTransform(b2Vec2(100.0f / SCALE, 500.0f / SCALE), 0);
+                    b2_ballBody->SetLinearVelocity(b2Vec2(0, 0));
+                    b2_ballBody->SetAngularVelocity(0);*/
 
-                    //bird.setVelocity(ResetVel);
-                    //bird.setPosition(SlingshotPos, 0);
-                    //bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
+                    //Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
+                    //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+
+                    bird.setVelocity(ResetVel);
+                    bird.setPosition(SlingshotPos, 0);
+                    bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
 
                     std::cout << "Firing!!!!" << std::endl;
                 }
@@ -189,12 +196,14 @@ int main() {
 
         for (std::unique_ptr<Pig>& p : ls_pigs) 
         {
+            //p->setLocation(b2Vec2(2.f, 2.f));
             p->UpdateSprite();
             p->render(window);
         }
 
         for (std::unique_ptr<Bird>& b : ls_birds)
         {
+            //p->setLocation(b2Vec2(2.f, 2.f));
             b->UpdateSprite();
             b->render(window);
         }
