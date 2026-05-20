@@ -114,7 +114,7 @@ int main() {
     //New Pig
     Pig BigEnemyPig("../assets/Ang_Birds/EnemyPig.png", b2Vec2(500.0f / SCALE, 200.0f / SCALE), world);
     //Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
-    Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
+    Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f / SCALE, 200.0f / SCALE), world);
     
     //List of Pigs
     std::list < std::unique_ptr<Pig>> ls_pigs; //Make list unique pointers
@@ -124,6 +124,12 @@ int main() {
         //Create a new bird on the heap and move it into the list
         ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
     }
+
+    //List of Birds
+    std::list < std::unique_ptr<Bird>> ls_birds;
+    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((80.0f / SCALE), 200.0f / SCALE), world));
+    ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
+
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -190,9 +196,14 @@ int main() {
 
         for (std::unique_ptr<Pig>& p : ls_pigs) 
         {
-            //p->setLocation(b2Vec2(2.f, 2.f));
             p->UpdateSprite();
             p->render(window);
+        }
+
+        for (std::unique_ptr<Bird>& b : ls_birds)
+        {
+            b->UpdateSprite();
+            b->render(window);
         }
 
         window.draw(sf_groundVisual);
