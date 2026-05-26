@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/googletest-src/googlemock
-# Build directory: H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/googletest-build/googlemock
+# Source directory: C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/googletest-src/googlemock
+# Build directory: C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/googletest-build/googlemock
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

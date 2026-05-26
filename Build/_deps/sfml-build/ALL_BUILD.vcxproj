@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D2FE0D2B-158C-3AB0-A3A5-7778B4FE33E2}</ProjectGuid>
+    <ProjectGuid>{875F17E5-B694-3F8B-A618-D68F0749EE1F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/sfml-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,42 +159,43 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\ZERO_CHECK.vcxproj">
-      <Project>{3FF6C0AD-FB8F-3034-B9B0-2344F36EC21B}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\ZERO_CHECK.vcxproj">
+      <Project>{F69BA4BE-5E47-37E3-899E-C46C3CC33848}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
-      <Project>{C9541D0D-6E63-3985-87C8-6572F4703124}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{65D28C39-B1B4-343A-BD65-3546D61978E2}</Project>
       <Name>sfml-audio</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
-      <Project>{86634CBB-F2EC-380A-846D-5C5D9C5899CF}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{845D5ADA-9514-3FA7-90AE-94EEB910DC04}</Project>
       <Name>sfml-graphics</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Main\sfml-main.vcxproj">
-      <Project>{7728FFDA-6235-37E6-93BB-F73E507EFD82}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Main\sfml-main.vcxproj">
+      <Project>{ADB1C199-12DE-3BFE-B125-4A84F7BFED79}</Project>
       <Name>sfml-main</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Network\sfml-network.vcxproj">
-      <Project>{74690798-958A-399A-9347-B82168259872}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{7A207C3F-A820-3F43-B94D-272332A42F57}</Project>
       <Name>sfml-network</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
-      <Project>{8F6A1301-E5DF-36D7-BDAF-BCC765DFDD59}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
+      <Project>{1919B4C2-B51D-341D-B3A5-3425CC0CD1F0}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
-      <Project>{BFD93324-9BCB-3D21-8C90-8C3A71DD0583}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{27E0F15C-0E90-3C2F-B6C8-E7C65DEBCABB}</Project>
       <Name>sfml-window</Name>
     </ProjectReference>
   </ItemGroup>

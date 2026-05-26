@@ -1,315 +1,315 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_broad_phase.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_broad_phase.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_chain_shape.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_chain_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_circle_shape.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_circle_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collide_circle.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collide_circle.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collide_edge.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collide_edge.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collide_polygon.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collide_polygon.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collision.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_collision.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_distance.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_distance.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_dynamic_tree.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_dynamic_tree.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_edge_shape.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_edge_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_polygon_shape.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_polygon_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_time_of_impact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\collision\b2_time_of_impact.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_block_allocator.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_block_allocator.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_draw.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_draw.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_math.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_math.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_settings.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_settings.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_stack_allocator.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_stack_allocator.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_timer.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\common\b2_timer.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_body.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_body.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_circle_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact_manager.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact_manager.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact_solver.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact_solver.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_distance_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_distance_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_fixture.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_fixture.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_friction_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_friction_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_gear_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_gear_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_island.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_island.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_motor_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_motor_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_mouse_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_mouse_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_contact.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_prismatic_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_prismatic_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_pulley_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_pulley_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_revolute_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_revolute_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_weld_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_weld_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_wheel_joint.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_wheel_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_world.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_world.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_world_callbacks.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_world_callbacks.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\rope\b2_rope.cpp">
+    <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\rope\b2_rope.cpp">
       <Filter>src\rope</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_circle_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact_solver.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_contact_solver.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_island.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_island.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\dynamics\b2_polygon_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_api.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_api.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_block_allocator.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_block_allocator.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_body.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_body.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_broad_phase.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_broad_phase.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_chain_shape.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_chain_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_circle_shape.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_circle_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_collision.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_collision.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_common.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_common.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_contact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_contact.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_contact_manager.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_contact_manager.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_distance.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_distance.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_distance_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_distance_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_draw.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_draw.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_dynamic_tree.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_dynamic_tree.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_edge_shape.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_edge_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_fixture.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_fixture.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_friction_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_friction_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_gear_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_gear_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_growable_stack.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_growable_stack.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_math.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_math.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_motor_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_motor_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_mouse_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_mouse_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_polygon_shape.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_polygon_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_prismatic_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_prismatic_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_pulley_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_pulley_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_revolute_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_revolute_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_rope.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_rope.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_settings.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_settings.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_shape.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_stack_allocator.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_stack_allocator.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_time_of_impact.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_time_of_impact.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_timer.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_timer.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_time_step.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_time_step.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_types.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_types.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_weld_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_weld_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_wheel_joint.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_wheel_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_world.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_world.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_world_callbacks.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\b2_world_callbacks.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\box2d.h">
+    <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\include\box2d\box2d.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{3B978F20-5F31-306C-B2CE-8E087913E95B}</UniqueIdentifier>
+      <UniqueIdentifier>{2661D1B2-7773-36B6-8547-6EE15579E5AE}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\box2d">
-      <UniqueIdentifier>{E967A321-D78F-3235-A0BC-57989213DC8D}</UniqueIdentifier>
+      <UniqueIdentifier>{A85544F6-FF91-3010-9DAA-CE3C863F0D60}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{73EC9BD6-8227-3EFC-BAEB-7C0BE93B874B}</UniqueIdentifier>
+      <UniqueIdentifier>{7CF4E8FC-50A2-3DBD-AC2F-2570E09530B3}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\collision">
-      <UniqueIdentifier>{82C4E571-F678-3F63-9F17-AA4357A705F5}</UniqueIdentifier>
+      <UniqueIdentifier>{7D572536-B1C0-373B-89AF-A4CE049C3DC8}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common">
-      <UniqueIdentifier>{18E5A330-A8A2-3C62-A486-12FB9C1DFC9F}</UniqueIdentifier>
+      <UniqueIdentifier>{25740992-C775-3E0D-8E82-B8FD79FCBC0B}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\dynamics">
-      <UniqueIdentifier>{535814FF-0D5F-3AD9-9C02-CB27C20E4129}</UniqueIdentifier>
+      <UniqueIdentifier>{CAFC4355-D646-3879-9873-77F88B1B5FD8}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\rope">
-      <UniqueIdentifier>{E5000F49-C7CC-36EA-B2BC-3FAF952F8B6E}</UniqueIdentifier>
+      <UniqueIdentifier>{93B34213-0C8F-39DA-8260-5093A3BB53B7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

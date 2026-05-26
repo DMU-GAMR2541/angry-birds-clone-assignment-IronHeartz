@@ -1,11 +1,16 @@
 #include <gtest/gtest.h>
 #include "Enemy.h"
+#include "Bird.h"
+#include "Pig.h"
+#include "../include/Bird.h"
 #include "Slingshot.h"
 #include <vector>
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
 /// </summary>
+
+//extern std::list < std::unique_ptr<Bird>> ls_birds;
 
 // The fixture for testing class Foo.
 class EnemyTest : public testing::Test {
@@ -42,30 +47,37 @@ protected:
 
 };
 
-//class ParamTest : public::testing::TestWithParam<int> {
-//protected:
-//    ParamTest() = default;
-//    ~ParamTest() = default;
-//
-//    void SetUp() override {
-//        //Code here will be called immediately after the constructor (right before each test)
-//    }
-//
-//    void TearDown() override {
-//
-//    }
-//};
-//
-//TEST_P(ParamTest, SimpleTest) {
-//    int i_test = GetParam();
-//    std::cout << "Param value:: " << i_test << std::endl;
-//    EXPECT_GT(i_test, 1);
-//}
-//
-//INSTANTIATE_TEST_SUITE_P(
-//    Simple,
-//    ParamTest, ::testing::Values(1, 2, 3, 4, 5)
-//);
+class BirdTest : public testing::Test {
+public:
+    std::unique_ptr<Bird> bird;
+
+
+protected:
+
+
+    BirdTest() {
+        //Set up variables
+        b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
+        b2World world(b2_gravity);
+        const float SCALE = 30.0f;
+
+        Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
+        ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
+        ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
+
+
+    }
+
+
+    ~BirdTest() override {
+
+    }
+
+    //Function
+    void TestFunction() {
+
+    }
+};
 
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
@@ -97,6 +109,26 @@ TEST(EnemyTest2, YPosition_Test) {
     std::cout << "Y Position: " << e.getY() << std::endl;
     EXPECT_EQ(e.getY(), 0);
 }
+
+//TEST_F
+
+//TEST(BirdTest, NumOfBirds) 
+//{
+//    //ls_birds b;
+//    std::cout << "Number of birds: " << ls_birds.size() << std::endl;
+//    EXPECT_EQ(ls_birds.size(), 0);
+//}
+//
+//TEST(BirdTest2, CollisionTest) 
+//{
+//
+//}
+//
+//TEST(PigTest, NumOfPigs) 
+//{
+//    std::cout << "Number of pigss: " << ls_pigs.size() << std::endl;
+//    EXPECT_EQ(ls_pigs.size(), 0);
+//}
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);

@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D2FE0D2B-158C-3AB0-A3A5-7778B4FE33E2}</ProjectGuid>
+    <ProjectGuid>{875F17E5-B694-3F8B-A618-D68F0749EE1F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-src\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz" "-BH:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "H:/Prod C Plus/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz" "-BC:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build" --check-stamp-file "C:/Users/IronH/Desktop/Games Programming/GAMR2541/angry-birds-clone-assignment-IronHeartz/Build/_deps/box2d-build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,46 +159,47 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\ZERO_CHECK.vcxproj">
-      <Project>{3FF6C0AD-FB8F-3034-B9B0-2344F36EC21B}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\ZERO_CHECK.vcxproj">
+      <Project>{F69BA4BE-5E47-37E3-899E-C46C3CC33848}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\src\box2d.vcxproj">
-      <Project>{6AC8E2ED-75C5-31B2-AE5A-BD44ACCF3FCF}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\src\box2d.vcxproj">
+      <Project>{70A865E8-E7F5-318A-B887-20B83C817DF3}</Project>
       <Name>box2d</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\glad\glad.vcxproj">
-      <Project>{D0817101-918B-3DA2-8846-4C82C8D5F916}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\glad\glad.vcxproj">
+      <Project>{A56CB5F2-50D5-30D0-8126-F86DB082ACF1}</Project>
       <Name>glad</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\glfw\glfw.vcxproj">
-      <Project>{317795DA-EA1C-32EB-BE12-EE21235BF4AD}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\glfw\glfw.vcxproj">
+      <Project>{C460B8FC-99D5-3003-A411-0FDDABC189A8}</Project>
       <Name>glfw</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\imgui\imgui.vcxproj">
-      <Project>{2C90EDB3-205E-3672-B2D2-D6E79F55EE2E}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\imgui\imgui.vcxproj">
+      <Project>{F5067A5E-A100-3341-88BB-E1BBF46CB37D}</Project>
       <Name>imgui</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\sajson\sajson.vcxproj">
-      <Project>{77F7BB29-029A-3B44-AF0E-6003E8155847}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\extern\sajson\sajson.vcxproj">
+      <Project>{4576AB87-1949-3741-8B72-E9CC2FA076A5}</Project>
       <Name>sajson</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\testbed\testbed.vcxproj">
-      <Project>{73A9EADC-9121-3DC9-BD79-0EAFED1BFF5F}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\testbed\testbed.vcxproj">
+      <Project>{A1641758-BFD3-3045-AF77-F6D3E58774F0}</Project>
       <Name>testbed</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Prod C Plus\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\unit-test\unit_test.vcxproj">
-      <Project>{9521A5CD-ACA2-38A8-A1DF-270F1BD19612}</Project>
+    <ProjectReference Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\Build\_deps\box2d-build\unit-test\unit_test.vcxproj">
+      <Project>{EC0B8064-732B-3283-839F-E2127E20ABFD}</Project>
       <Name>unit_test</Name>
     </ProjectReference>
   </ItemGroup>

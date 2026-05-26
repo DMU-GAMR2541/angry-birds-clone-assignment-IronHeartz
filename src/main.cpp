@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Pig.h"
 #include "Bird.h"
+#include "ContactListener.h"
 #include <set>
 #include <vector>
 #include <list>
@@ -22,9 +23,13 @@ int main() {
     float MousePosX;
     float MousePosY;
 
+    //Contact listener
+    ContactListener contactListener;
+
     //setup world.
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
     b2World world(b2_gravity);
+    world.SetContactListener(&contactListener);
 
     //Setup ground for the circle to move / bounce on.
     //Needs to have a body definition and a body. We use a raw pointer for the b2Body as Box2d does the management itself.
@@ -117,7 +122,7 @@ int main() {
     Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
     
     //List of Pigs
-    std::list < std::unique_ptr<Pig>> ls_pigs; //Make list unique pointers
+    //std::list < std::unique_ptr<Pig>> ls_pigs; //Make list unique pointers
 
     for (int i = 1; i < 4; i++) 
     {
@@ -125,11 +130,10 @@ int main() {
         ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
     }
 
-    std::list < std::unique_ptr<Bird>> ls_birds;
+    //std::list < std::unique_ptr<Bird>> ls_birds;
 
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
-
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -160,6 +164,8 @@ int main() {
                     bird.Impluse(b2Vec2(MousePosX / 5, -MousePosY / 8), true);
 
                     std::cout << "Firing!!!!" << std::endl;
+
+                    
                 }
             }
         }
@@ -193,6 +199,27 @@ int main() {
 
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
+
+        //Get the set of pointers created for collisions
+        std::set<uintptr_t> ColPointer = contactListener.getPointer(); //List of all the collisions
+
+        //Use an iterator to find in the set, pigs that have been collided with
+        for (auto PigIter = ls_pigs.begin(); PigIter != ls_pigs.end();)
+        {
+            //for every pig in the list, get the user data
+            uintptr_t currentPigID = PigIter->get()->getBody()->GetUserData().pointer;
+
+            if (ColPointer.find(currentPigID) != ColPointer.end()) //Keep moving through the list until the end
+            {
+                //world.DestroyBody(PigIter->get()->getBody()); //If the user data is there, destory the body
+
+                PigIter = ls_pigs.erase(PigIter); //Remove the pig from the iterator
+            }
+            else 
+            {
+                ++PigIter; //Only incerement if we didn't erase anything
+            }
+        }
 
         for (std::unique_ptr<Pig>& p : ls_pigs) 
         {
