@@ -5,6 +5,7 @@
 #include "../include/Bird.h"
 #include "Slingshot.h"
 #include <vector>
+#include <list>
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
@@ -49,7 +50,7 @@ protected:
 
 class BirdTest : public testing::Test {
 public:
-    std::unique_ptr<Bird> bird;
+    std::list < std::unique_ptr<Bird>> ls_birds;
 
 
 protected:
@@ -61,11 +62,9 @@ protected:
         b2World world(b2_gravity);
         const float SCALE = 30.0f;
 
-        Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
+        //Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
         ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
         ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
-
-
     }
 
 
@@ -75,6 +74,45 @@ protected:
 
     //Function
     void TestFunction() {
+        for (std::unique_ptr<Bird>& b : ls_birds)
+        {
+            b->UpdateSprite();
+        }
+
+    }
+};
+
+class PigTest : public testing::Test {
+public:
+    std::list < std::unique_ptr<Pig>> ls_pigs;
+
+protected:
+
+
+    PigTest() {
+        //Set up variables
+        b2Vec2 b2_gravity(0.0f, 9.8f);
+        b2World world(b2_gravity);
+        const float SCALE = 30.0f;
+
+        for (int i = 1; i < 4; i++)
+        {
+            //Create a new bird on the heap and move it into the list
+            ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
+        }
+    }
+
+
+    ~PigTest() override {
+
+    }
+
+    //Function
+    void TestFunction() {
+        for (std::unique_ptr<Pig>& b : ls_pigs)
+        {
+            b->UpdateSprite();
+        }
 
     }
 };
@@ -110,14 +148,19 @@ TEST(EnemyTest2, YPosition_Test) {
     EXPECT_EQ(e.getY(), 0);
 }
 
-//TEST_F
+TEST_F(BirdTest, SpriteLoader) 
+{
+    Bird& bird = *ls_birds.front(); //Get the first bird from the list 
+    const sf::Texture* texture = bird.getSprite().getTexture();
+    ASSERT_NE(texture, nullptr);
+}
 
-//TEST(BirdTest, NumOfBirds) 
-//{
-//    //ls_birds b;
-//    std::cout << "Number of birds: " << ls_birds.size() << std::endl;
-//    EXPECT_EQ(ls_birds.size(), 0);
-//}
+TEST_F(BirdTest, NumOfBirds) 
+{
+    //ls_birds b;
+    std::cout << "Number of birds: " << ls_birds.size() << std::endl;
+    EXPECT_EQ(ls_birds.size(), 2);
+}
 //
 //TEST(BirdTest2, CollisionTest) 
 //{
@@ -126,8 +169,8 @@ TEST(EnemyTest2, YPosition_Test) {
 //
 //TEST(PigTest, NumOfPigs) 
 //{
-//    std::cout << "Number of pigss: " << ls_pigs.size() << std::endl;
-//    EXPECT_EQ(ls_pigs.size(), 0);
+//    std::cout << "Number of pigs: " << ls_pigs.size() << std::endl;
+//    EXPECT_EQ(ls_pigs.size(), 3);
 //}
 
 int main(int argc, char** argv) {
