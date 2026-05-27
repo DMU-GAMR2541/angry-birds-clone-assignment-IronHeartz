@@ -67,7 +67,6 @@ protected:
         ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
     }
 
-
     ~BirdTest() override {
 
     }
@@ -94,12 +93,12 @@ protected:
         b2Vec2 b2_gravity(0.0f, 9.8f);
         b2World world(b2_gravity);
         const float SCALE = 30.0f;
-
-        for (int i = 1; i < 4; i++)
-        {
-            //Create a new bird on the heap and move it into the list
-            ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * i, 200.0f / SCALE), world));
-        }
+        
+        //Create a new bird on the heap and move it into the list
+        ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * 1, 200.0f / SCALE), world));
+        ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * 2, 200.0f / SCALE), world));
+        ls_pigs.push_back(std::make_unique<Pig>("../assets/Ang_birds/EnemyPig.png", b2Vec2((200.0f / SCALE) * 3, 200.0f / SCALE), world));
+        
     }
 
 
@@ -152,7 +151,7 @@ TEST_F(BirdTest, SpriteLoader)
 {
     Bird& bird = *ls_birds.front(); //Get the first bird from the list 
     const sf::Texture* texture = bird.getSprite().getTexture();
-    ASSERT_NE(texture, nullptr);
+    ASSERT_NE(texture, nullptr); //Make sure the sprite DOES NOT EQUAL (NE) nothing
 }
 
 TEST_F(BirdTest, NumOfBirds) 
@@ -161,6 +160,22 @@ TEST_F(BirdTest, NumOfBirds)
     std::cout << "Number of birds: " << ls_birds.size() << std::endl;
     EXPECT_EQ(ls_birds.size(), 2);
 }
+
+TEST_F(BirdTest, RelationTest) {
+    Bird& bird = *ls_birds.front(); //Grab the first bird in the list
+    float xBirdPos = bird.getBody()->GetPosition().x; //Grab the x position of the bird
+
+    for (const std::unique_ptr<Pig>& pig : ls_pigs) //Loop through every pig in the list. The "&" is referencing Pig, not copying
+    {                                               //Do that so 
+        float xPigPos = pig->getBody()->GetPosition().x;
+
+        EXPECT_NE(xBirdPos, xPigPos);
+    }
+
+    //EXPECT_NE(ls_birds.front()->getBody()->GetPosition().x, ls_pigs.front()->getBody()->GetPosition().x);
+}
+
+
 //
 //TEST(BirdTest2, CollisionTest) 
 //{
