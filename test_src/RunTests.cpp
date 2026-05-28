@@ -116,6 +116,33 @@ protected:
     }
 };
 
+class BirdParamTest : public ::testing::TestWithParam<b2Vec2> {
+public:
+    std::list<std::unique_ptr<Bird>> ls_birds2;
+    
+    //Setup world
+    b2Vec2 b2_gravity;
+    b2World world;
+    const float SCALE = 30.0f;
+    /*b2Body* b2_Body;
+    void Impluse(b2Vec2 ImpluseForce, bool Awake)
+    {
+        b2_Body->ApplyLinearImpulseToCenter(ImpluseForce, Awake);
+    }*/
+
+protected:
+    BirdParamTest() : b2_gravity(0.0f, 9.8f), world(b2_gravity) {
+        ls_birds2.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
+        ls_birds2.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
+    }
+    ~BirdParamTest() = default;
+    
+};
+
+INSTANTIATE_TEST_SUITE_P( // Setting the parameters for the test
+    Simple, BirdParamTest, ::testing::Values(b2Vec2(20.0, 10.0), b2Vec2(40.0, 10.0), b2Vec2(60.0, 10.0), b2Vec2(90.0, 10.0)) //Testing 4 times
+);
+
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
@@ -164,15 +191,34 @@ TEST_F(BirdTest, NumOfBirds)
 TEST_F(BirdTest, RelationTest) {
     Bird& bird = *ls_birds.front(); //Grab the first bird in the list
     float xBirdPos = bird.getBody()->GetPosition().x; //Grab the x position of the bird
+    std::cout << "Position of bird is: " << xBirdPos << std::endl;
 
     for (const std::unique_ptr<Pig>& pig : ls_pigs) //Loop through every pig in the list. The "&" is referencing Pig, not copying
-    {                                               //Do that so 
-        float xPigPos = pig->getBody()->GetPosition().x;
+    {                                               //Do that so every pig knows it's a Pig object.
+        float xPigPos = pig->getBody()->GetPosition().x; //Grab the position of the pig
 
         EXPECT_NE(xBirdPos, xPigPos);
     }
+}
 
-    //EXPECT_NE(ls_birds.front()->getBody()->GetPosition().x, ls_pigs.front()->getBody()->GetPosition().x);
+TEST_P(BirdParamTest, BirdMovement) {
+
+    b2Vec2 ImpulseFly = GetParam();
+    b2Vec2 PreviousPos;
+
+    Bird* bird = ls_birds2.front().get();
+    b2Body* birdBody = bird->getBody();
+    b2Vec2 startPos = birdBody->GetPosition();
+
+    birdBody->ApplyLinearImpulseToCenter(ImpulseFly, true);
+    b2Vec2 finalPos = birdBody->GetPosition();
+
+    b2Vec2 DistanceTravelled = finalPos - startPos;
+    
+    EXPECT_GT(DistanceTravelled.x, PreviousPos.x);
+    EXPECT_GT(DistanceTravelled.x, ImpulseFly.x * 0.1f);
+    PreviousPos = finalPos;
+
 }
 
 
