@@ -211,6 +211,10 @@ TEST_P(BirdParamTest, BirdMovement) {
     b2Vec2 startPos = birdBody->GetPosition();
 
     birdBody->ApplyLinearImpulseToCenter(ImpulseFly, true);
+    for (int i = 0; i < 60; i++) 
+    {
+        world.Step(1.0f / 60.0f, 8, 3); //One iterates the velocity, other the position
+    }
     b2Vec2 finalPos = birdBody->GetPosition();
 
     b2Vec2 DistanceTravelled = finalPos - startPos;
