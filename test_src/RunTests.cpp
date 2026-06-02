@@ -11,8 +11,6 @@
 ///Taken from the GoogleTest primer. 
 /// </summary>
 
-//extern std::list < std::unique_ptr<Bird>> ls_birds;
-
 // The fixture for testing class Foo.
 class EnemyTest : public testing::Test {
 public:

@@ -4,9 +4,38 @@
 #include "Pig.h"
 #include "Bird.h"
 #include "ContactListener.h"
+#include "StaticObject.h"
 #include <set>
 #include <vector>
 #include <list>
+#include <thread>
+#include <memory>
+#include <chrono>
+#include <future>
+
+void Working(int param) //Will pause breifly and iterate through
+{
+    int i = 0;
+    while (i < param) 
+    {
+        std::cout << "Processing 1" << std::endl;
+        std::this_thread::sleep_for(1s);
+        i++;
+    }
+}
+
+bool MoreWorking() 
+{
+    int j = 0;
+    while (j < 3) 
+    {
+        std::cout << "Processing 2" << std::endl;
+        std::this_thread::sleep_for(2s);
+        j++;
+    }
+
+    return true;
+}
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -120,6 +149,8 @@ int main() {
     Pig BigEnemyPig("../assets/Ang_Birds/EnemyPig.png", b2Vec2(500.0f / SCALE, 200.0f / SCALE), world);
     //Pig GeneralPig("../assets/Ang_Birds/sprite_3.png", sf::IntRect(7, 5, 101, 90), sf::Vector2f(650.0f, 200.f), world);
     Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
+
+    StaticObject GameText(sf::Vector2f(200, 100), "Angry Birds", "../assets/fonts/angry-birds.ttf");
     
     //List of Pigs
     //std::list < std::unique_ptr<Pig>> ls_pigs; //Make list unique pointers
@@ -134,6 +165,11 @@ int main() {
 
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
+
+    std::thread t;
+    t = std::thread(Working, 3);
+
+    std::future<bool> f = std::async(std::launch::async, MoreWorking); //Launch it immediately
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -241,9 +277,19 @@ int main() {
         window.draw(sf_plankVisual2);
         BigEnemyPig.render(window);
         bird.render(window);
+        GameText.render(window);
 
         window.display();
     }
 
+    if (t.joinable())
+    {
+        t.join();
+    }
+
+    if (f.get()) 
+    {
+        std::cout << "This async is true" << std::endl;
+    }
     return 0;
 }
