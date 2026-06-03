@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
 #include <iostream>
+#include "Multithreading2.h"
 #include "Pig.h"
 #include "Bird.h"
 #include "ContactListener.h"
@@ -13,31 +14,33 @@
 #include <chrono>
 #include <future>
 
-void Working(int param) //Will pause breifly and iterate through
-{
-    int i = 0;
-    while (i < param) 
-    {
-        std::cout << "Processing 1" << std::endl;
-        std::this_thread::sleep_for(1s);
-        i++;
-    }
-}
-
-bool MoreWorking() 
-{
-    int j = 0;
-    while (j < 3) 
-    {
-        std::cout << "Processing 2" << std::endl;
-        std::this_thread::sleep_for(2s);
-        j++;
-    }
-
-    return true;
-}
+//void Working(int param) //Will pause breifly and iterate through
+//{
+//    int i = 0;
+//    while (i < param) 
+//    {
+//        std::cout << "Processing 1" << std::endl;
+//        std::this_thread::sleep_for(1s);
+//        i++;
+//    }
+//}
+//
+//bool MoreWorking() 
+//{
+//    int j = 0;
+//    while (j < 3) 
+//    {
+//        std::cout << "Processing 2" << std::endl;
+//        std::this_thread::sleep_for(2s);
+//        j++;
+//    }
+//
+//    return true;
+//}
 
 int main() {
+    Multithreading2 gameThread;
+
     // --- 1. WINDOW SETUP ---
     sf::RenderWindow window(sf::VideoMode(800, 600), "Annoyed_Flocks");
     window.setFramerateLimit(60);
@@ -166,10 +169,12 @@ int main() {
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
 
-    std::thread t;
-    t = std::thread(Working, 3);
 
-    std::future<bool> f = std::async(std::launch::async, MoreWorking); //Launch it immediately
+
+    //std::thread t;
+    //t = std::thread(Working, 3);
+
+    //std::future<bool> f = std::async(std::launch::async, MoreWorking); //Launch it immediately
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -282,14 +287,6 @@ int main() {
         window.display();
     }
 
-    if (t.joinable())
-    {
-        t.join();
-    }
 
-    if (f.get()) 
-    {
-        std::cout << "This async is true" << std::endl;
-    }
     return 0;
 }

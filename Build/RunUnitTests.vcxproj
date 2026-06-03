@@ -429,6 +429,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\include\StaticObject.h" />
     <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\src\DynamicObject.cpp" />
     <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\test_src\RunTests.cpp" />
+    <ClInclude Include="Multithreading.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup />

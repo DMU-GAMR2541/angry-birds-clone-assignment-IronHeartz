@@ -7,9 +7,6 @@
     <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UI.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\include\StaticObject.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -32,6 +29,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\include\StaticObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Multithreading2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

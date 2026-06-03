@@ -415,7 +415,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\include\StaticObject.cpp" />
     <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\src\DynamicObject.cpp" />
     <ClCompile Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\src\main.cpp" />
-    <ClCompile Include="UI.cpp" />
+    <ClInclude Include="..\include\Multithreading2.h" />
     <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\include\Bird.h" />
     <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\include\DynamicObject.h" />
     <ClInclude Include="C:\Users\IronH\Desktop\Games Programming\GAMR2541\angry-birds-clone-assignment-IronHeartz\include\Enemy.h" />
