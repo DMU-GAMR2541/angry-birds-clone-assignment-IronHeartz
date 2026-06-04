@@ -3,8 +3,6 @@
 #include "GameObject.h"
 
 class StaticObject : public virtual GameObject {
-
-
 public:
 	StaticObject() = default;
 	~StaticObject() = default;
