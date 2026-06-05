@@ -22,3 +22,12 @@ void StaticObject::render(sf::RenderWindow& GO_window)
 {
 	GO_window.draw(text);
 }
+
+//StaticImage::StaticImage(std::string ImageStr, std::string GameWindow)
+//{
+//	if (!ImageTexture.loadFromFile(ImageStr)) {
+//		std::cout << "Error loading image" << std::endl;
+//	}
+//
+//
+//}

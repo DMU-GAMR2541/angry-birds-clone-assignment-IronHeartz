@@ -43,15 +43,6 @@ public:
         }
         b_assetsReady = true;
         return b_assetsReady;
-        
-        
-        
-        /*while (i < 3)
-        {
-            std::cout << "Processing 1" << std::endl;
-            std::this_thread::sleep_for(std::chrono::milliseconds(200));
-            i++;
-        }*/
     }
 
     float getProgress() {
@@ -80,7 +71,7 @@ public:
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
             std::unique_lock<std::mutex> lock(m);
-            f_progress += 0.01f;
+            //f_progress += 0.01f;
             lock.unlock();
             s++;
 

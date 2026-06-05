@@ -17,7 +17,6 @@
 int main() {
     Multithreading2 gameThread;
     bool b_gameReady = false;
-    
 
     // --- 1. WINDOW SETUP ---
     sf::RenderWindow window(sf::VideoMode(800, 600), "Annoyed_Flocks");
@@ -130,7 +129,7 @@ int main() {
     Pig BigEnemyPig("../assets/Ang_Birds/EnemyPig.png", b2Vec2(500.0f / SCALE, 200.0f / SCALE), world);
     Bird bird("../assets/Ang_Birds/red.png", b2Vec2(150.0f, 200.0f), world);
 
-    StaticObject GameText(sf::Vector2f(200, 100), "Angry Birds", "../assets/fonts/angry-birds.ttf");
+    //StaticObject GameText(sf::Vector2f(200, 100), "Angry Birds", "../assets/fonts/angry-birds.ttf");
 
     //std::list < std::unique_ptr<Pig>> ls_pigs;
 
@@ -144,6 +143,13 @@ int main() {
 
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Chuck.png", b2Vec2((75.0f / SCALE), 200.0f / SCALE), world));
     ls_birds.push_back(std::make_unique<Bird>("../assets/Ang_birds/Jay.png", b2Vec2((70.0f / SCALE), 200.0f / SCALE), world));
+
+    sf::Texture gameStartScreen;
+    gameStartScreen.loadFromFile("../assets/StartScreen.png");
+    sf::Sprite loadGameScreen;
+    loadGameScreen.setTexture(gameStartScreen);
+    loadGameScreen.setScale(3.5, 3.5);
+    loadGameScreen.setPosition(0, 1);
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -229,6 +235,19 @@ int main() {
             }
         }
 
+
+        if (gameThread.getProgress() < 10) {
+            std::cout << "Game loading (main)..." << gameThread.getProgress() << std::endl;
+            StaticObject GameText(sf::Vector2f(300, 100), "Angry Birds", "../assets/fonts/angry-birds.ttf");
+            window.draw(loadGameScreen);
+            GameText.render(window);
+
+        }
+        else {
+            b_gameReady = true;
+        }
+
+        if (b_gameReady) {
         for (std::unique_ptr<Pig>& p : ls_pigs) 
         {
             //p->setLocation(b2Vec2(2.f, 2.f));
@@ -242,23 +261,12 @@ int main() {
             b->UpdateSprite();
             b->render(window);
         }
-
-        if (gameThread.getProgress() < 10) {
-            std::cout << "Game loading (main)..." << gameThread.getProgress() << std::endl;
-
-        }
-        else {
-            b_gameReady = true;
-        }
-
-        if (b_gameReady) {
             window.draw(sf_groundVisual);
             window.draw(sf_wallVisual);
             window.draw(sf_plankVisual);
             window.draw(sf_plankVisual2);
             BigEnemyPig.render(window);
             bird.render(window);
-            GameText.render(window);
 
         }
 

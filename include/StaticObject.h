@@ -22,3 +22,16 @@ private:
 	sf::Text text; //The text
 
 };
+
+//class StaticImage : public virtual GameObject{
+//public:
+//	StaticImage() = default;
+//	~StaticImage() = default;
+//
+//	StaticImage(const std::string ImageTxt, const std::string GameWindow);
+//
+//private:
+//	sf::Texture ImageTexture;
+//	sf::Sprite ImageSprite;
+//	sf::String GameWindow;
+//};
